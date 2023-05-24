@@ -2,11 +2,16 @@
   margin: 0;
 }
 
+body {
+  margin: 0 auto;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 14rem;
+  height: 8rem;
+  margin: 0 auto;
   background-color: blue;
   padding-inline: 2rem;
   background-color: #f9f9f9;
@@ -16,9 +21,13 @@ header a img {
   height: 7rem;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 header ul {
   display: flex;
-  list-style: none;
   color: #343237;
 }
 
@@ -27,15 +36,51 @@ header ul li {
   padding-block: 2rem;
 }
 
+.decor {
+  display: flex;
+  justify-content: space-between;
+}
+
+.decoleft, .decoright {
+  height: 1.5rem;
+}
+
+.list_speakers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+.speaker {
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.speaker img {
+  width: 15rem;
+}
+
+.decospeaker {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.decospeaker img {
+  width: 10rem;
+}
+
 .teaser {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 21.875rem;
+  height: 13rem;
   background: linear-gradient(0deg, #6425e5, #5f4be8);
+  margin-top: -0.8rem;
 }
 
-.img_teaser {
+.teaser img {
+  height: 18rem;
   align-self: flex-end;
   margin-block-end: -0.2rem;
 }
@@ -43,4 +88,74 @@ header ul li {
 .title_description_teaser {
   color: #f1eee9;
   align-self: center;
+}
+
+.event_speakers ul {
+  display: flex;
+  padding-block: 2rem;
+}
+
+footer {
+  background-color: #343237;
+  padding-block-start: 6rem;
+  padding-block-end: 4rem;
+  padding-inline: 3rem;
+}
+
+.footerline1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.footerline1 div img {
+  max-width: 100%;
+}
+
+.footerline2 ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerline2 ul li {
+  padding-inline: 3rem;
+  padding-block: 3rem;
+  object-fit: countain;
+}
+
+.footerline3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socialnetwork {
+  border: 2px solid #535156;
+  border-radius: 5px;
+  width: 46%;
+}
+
+.socialnetwork h2 {
+  padding-block-start: 2rem;
+  padding-block-end: 0.3rem;
+}
+
+.socialnetwork div {
+  padding-block-start: 0.3rem;
+  padding-block-end: 1rem;
+}
+
+.socialnetworklink {
+  display: flex;
+}
+
+.infofooter {
+  display: flex;
+  width: 50%;
+  padding-inline-start: 3.5rem;
+  align-items: center;
+}
+
+.infofooter1, .infofooter2 {
+  width: 50%;
 }/*# sourceMappingURL=style.css.map */
