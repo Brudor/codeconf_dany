@@ -64,6 +64,7 @@ header ul li {
 .decospeaker {
   display: flex;
   justify-content: flex-end;
+  margin-top: -1.5rem;
 }
 
 .decospeaker img {

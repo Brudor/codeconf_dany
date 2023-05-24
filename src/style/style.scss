@@ -1,3 +1,5 @@
+
+
 * {
     margin : 0;
 }
@@ -29,6 +31,7 @@ header ul li {
     padding-inline: 0.5rem;
     padding-block: 2rem;
 }
+
 .decor {
     display: flex;
     justify-content: space-between;
@@ -45,6 +48,7 @@ header ul li {
     width: 15rem;
     display: flex;
     flex-direction: column;
+    background-color: ;
 }
 .speaker img {
     width: 15rem;
@@ -53,6 +57,7 @@ header ul li {
 .decospeaker {
     display: flex;
     justify-content: flex-end;
+    margin-top: -1.5rem;
 }
 .decospeaker img {
     width: 10rem;
@@ -63,7 +68,7 @@ header ul li {
     justify-content: center;
     align-items: flex-end;
     height: 13rem;
-    background: linear-gradient(0deg, #6425e5, #5f4be8);
+    background: linear-gradient(0deg, rgba(96,76,233,1) 0%, rgba(116,88,233,1) 50%, rgba(102,42,228,1) 100%);
     margin-top: -0.8rem;
 }
 .teaser img {
