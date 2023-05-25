@@ -25,7 +25,7 @@ ul {
     display: flex;
     font-family: mavenpro;
     font-weight: bold; 
-    font-size: 22px;
+    font-size: 20px;
     color: #343237;
     
 }
@@ -159,7 +159,8 @@ ul {
 .teaser img {
     height: 18rem;
     align-self: flex-end;
-    margin-block-end: -0.2rem;
+    margin-block-end: -0.15rem;
+    padding-inline-end: 3rem;
 }
 .title_description_teaser {
     color: #f1eee9;
@@ -202,22 +203,25 @@ ul {
 }
 .formsectionh2, .formsectionh3, .formsectionp {
     text-align: center;
-    width: 28rem;
+    width: 36rem;
     margin: 0 auto;
 }
 .formsectionh2 {
     text-transform: uppercase;
     color: #5f4be8;
     letter-spacing: -1px;
+    font-size: 32px;
 }
 .formsectionh3 {
-    font-family: museo500;
+    font-family: museo300;
     padding-block-start: 1.5rem;
     padding-block-end: 0.5rem;
+    font-size: 26px;
 }
 .formsectionp {
     padding-block-end: 3rem;
     line-height: 1.5;
+    font-size: 20px;
 }
 .formline1 {
     display: flex;
@@ -249,15 +253,16 @@ ul {
     text-transform: uppercase;
     font-weight: bold;
     font-family: mavenpro;
+    font-size: 18px;
     letter-spacing: -1px;
 }
 .participate {
-    width: 13rem;
+    width: 15rem;
     margin: 0 auto;
     text-align: center;
     padding-block-start: 3rem;
-    font-family: museo500;
-    font-size: 22px;
+    font-family: museo700;
+    font-size: 24px;
 }
 .ctaticket {
     display: flex;
@@ -290,7 +295,7 @@ ul {
     border-radius: 0rem 0rem 1.5rem 1.5rem;
     width: auto;
     height: auto;
-    font-size: 12px;
+    font-size: 14px;
     font-family: mavenpro;
     margin: 0 auto;
 }
@@ -382,14 +387,17 @@ footer {
     margin-inline-start: 2rem;
     color: #ffffff;
 }
-.infofooter1 h2, .infofooter2 h2 {
+.infofooter1 h2 {
     font-size: 16px;
     font-family: mavenpro;
-    font-weight: 700;
+    font-weight: 500;
+}
+.infofooter2 {
+    letter-spacing: 0.5px;
 }
 .infofooter2 h2 {
     font-size: 16px;
-    font-family: museo500;
+    font-family: museo300;
 }
 
 .infofootermiddleelement1 {
@@ -400,7 +408,7 @@ footer {
 
 .infofootermiddleelement2 {
     font-weight: bold;
-    font-family: museo500;
+    font-family: museo300;
     padding-block: 0.3rem;
 }
 .infofooterlastelement1 {
