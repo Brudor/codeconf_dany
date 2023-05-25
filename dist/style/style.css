@@ -378,13 +378,17 @@ ul {
 
 .header_main ul {
   display: flex;
+  font-family: mavenpro;
+  font-weight: bold;
+  font-size: 22px;
+  color: #343237;
 }
 
 .header_main ul li a {
   padding-inline: 0.5rem;
   padding-block: 2rem;
-  color: #343237;
   text-decoration: none;
+  color: #343237;
 }
 
 .header_and_speaker {
@@ -436,12 +440,13 @@ ul {
   width: 10rem;
 }
 
-.firstnamefront, .lastnamefront, .firstnameback, .lastnameback {
+.firstnamefront, .lastnamefront, .nameback {
   color: #4b436a;
 }
 
 .location {
   color: #a29db1;
+  font-family: leaguespartan;
 }
 
 .namespeakerfront, .location {
@@ -449,10 +454,15 @@ ul {
   padding-block: 0.5rem;
 }
 
+.namespeakerfront, .namespeakerback {
+  font-family: museo700;
+  font-size: 22px;
+}
+
 .speakerfront {
   height: 23rem;
-  border: 1px solid black;
   display: flex;
+  background-color: #f8f8f8;
   flex-direction: column;
   justify-content: space-between;
   padding-block-end: 1.5rem;
@@ -466,6 +476,17 @@ ul {
   height: 23rem;
   border: 1px solid black;
   background-color: #ffefe7;
+  color: #343237;
+}
+
+.titleevent {
+  font-family: museo700;
+  font-size: 20px;
+}
+
+.contentevent {
+  font-family: mavenpro;
+  line-height: 1.4;
 }
 
 .event {
@@ -477,6 +498,9 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: mavenpro;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .aboutevent {
@@ -485,6 +509,7 @@ ul {
   padding-block: 0.5rem;
   padding-inline: 1rem;
   border-radius: 2rem;
+  text-transform: uppercase;
 }
 
 .timeevent {
@@ -519,11 +544,27 @@ ul {
   color: #f1eee9;
   align-self: center;
   padding-inline-start: 2rem;
-  width: 20rem;
+  width: 26rem;
+  font-family: museo500;
+  line-height: 1.5;
+}
+
+.title_description_teaser h1 {
+  font-size: 38px;
+}
+
+.title_description_teaser p {
+  font-family: leaguespartan;
+  font-weight: normal;
+  font-size: 19px;
 }
 
 .event_speakers {
   padding-inline: 2rem;
+  font-family: museo500;
+  font-weight: bold;
+  color: #4b436a;
+  letter-spacing: 0.5px;
 }
 
 .event_speakers ul {
@@ -537,6 +578,7 @@ ul {
   padding-block-end: 6rem;
   width: 100%;
   margin-block-start: 5rem;
+  color: #343237;
 }
 
 .formsection {
@@ -544,15 +586,27 @@ ul {
   margin: auto;
 }
 
-.formsection h2, .formsection h3, .formsection p {
+.formsectionh2, .formsectionh3, .formsectionp {
   text-align: center;
   width: 28rem;
   margin: 0 auto;
 }
 
-.formsection h2 {
+.formsectionh2 {
   text-transform: uppercase;
   color: #5f4be8;
+  letter-spacing: -1px;
+}
+
+.formsectionh3 {
+  font-family: museo500;
+  padding-block-start: 1.5rem;
+  padding-block-end: 0.5rem;
+}
+
+.formsectionp {
+  padding-block-end: 3rem;
+  line-height: 1.5;
 }
 
 .formline1 {
@@ -586,14 +640,18 @@ ul {
   margin: 0 auto;
   margin-block-start: 3rem;
   text-transform: uppercase;
+  font-weight: bold;
+  font-family: mavenpro;
+  letter-spacing: -1px;
 }
 
 .participate {
-  width: 12rem;
+  width: 13rem;
   margin: 0 auto;
   text-align: center;
   padding-block-start: 3rem;
-  font-weight: bold;
+  font-family: museo500;
+  font-size: 22px;
 }
 
 .ctaticket {
@@ -627,11 +685,11 @@ ul {
   padding-block: 0.3rem;
   padding-inline: 2rem;
   border-radius: 0rem 0rem 1.5rem 1.5rem;
-  margin-block-start: 1rem;
   width: auto;
   height: auto;
   font-size: 12px;
-  margin-block-start: 0rem;
+  font-family: mavenpro;
+  margin: 0 auto;
 }
 
 footer {
@@ -739,6 +797,35 @@ footer {
   color: #ffffff;
 }
 
-.infofooterlastelement {
+.infofooter1 h2, .infofooter2 h2 {
+  font-size: 16px;
+  font-family: mavenpro;
+  font-weight: 700;
+}
+
+.infofooter2 h2 {
+  font-size: 16px;
+  font-family: museo500;
+}
+
+.infofootermiddleelement1 {
+  font-weight: bold;
+  font-family: mavenpro;
+  padding-block: 0.3rem;
+}
+
+.infofootermiddleelement2 {
+  font-weight: bold;
+  font-family: museo500;
+  padding-block: 0.3rem;
+}
+
+.infofooterlastelement1 {
   color: #dac9b5;
+  font-family: museo500;
+}
+
+.infofooterlastelement2 {
+  color: #dac9b5;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */
