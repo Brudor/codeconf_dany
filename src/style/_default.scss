@@ -82,10 +82,11 @@ ul {
 .location {
     color: #a29db1;
     font-family: leaguespartan;
+    font-size: 20px;
 }
 .namespeakerfront, .location {
     padding-inline: 1rem;
-    padding-block: 0.5rem;
+
 }
 .namespeakerfront, .namespeakerback {
     font-family: museo700;
@@ -127,7 +128,7 @@ ul {
     align-items: center;
     font-family: mavenpro;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
 }
 .aboutevent {
     color: #f74c1e;
