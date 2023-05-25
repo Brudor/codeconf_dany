@@ -63,7 +63,7 @@ header, main {
 .decospeaker {
     display: flex;
     justify-content: flex-end;
-    margin-top: -1.5rem;
+    margin-top: -2rem;
 }
 .decospeaker img {
     width: 10rem;
@@ -81,6 +81,10 @@ header, main {
 .speakerfront {
     height: 23rem;
     border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-block-end: 1.5rem;
 }
 .speakerback {
     display: flex;
@@ -155,8 +159,6 @@ header, main {
     width: 35rem;
     margin: 0 auto;
 }
-.formline1 label, .formline2 label  {
-}
 .formline2 {
     display: flex;
     justify-content: space-between;
@@ -173,52 +175,62 @@ footer {
     padding-block-end: 4rem;
     padding-inline: 3rem;
 }
-.footerline {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 2rem;
+.footerline1 {
+    display: flex;
+    justify-content: space-between;
+    width: 60rem;
+    margin: 0 auto;
 }
 .footerline1A {
-    grid-column: span 6;
+    width: 27rem;
+    margin-inline-end: 2rem;
 }
-.footerline1B {
-    grid-column: span 6;
+.footerline1A {
+    width: 27rem;
+    margin-inline-end: 2rem;
+}
+.centreLA {
+    width: 28.5rem;
 }
 .footerline2 ul {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 2rem;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    width: 60rem;
+    margin: 0 auto;
 }
 .footerline2 ul li {
-    padding-inline: 3rem;
     padding-block: 3rem;
     object-fit: countain;
 }
 .footerline3 {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 2rem;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 60rem;
+    margin: 0 auto;
 }
 .socialnetwork {
     border: 2px solid #535156;
     border-radius: 5px;
-    
+    width: 24rem;
+    padding-inline: 2rem;
+    margin-inline-end: 2rem;
 }
 .socialnetwork h2 {
-    padding-block-start: 2rem;
-    padding-block-end: 0.3rem;
+    padding-block-start: 1rem;
 }
 .socialnetwork div {
     padding-block-start: 0.3rem;
-    padding-block-end: 1rem;
+    padding-block-end: 0.5rem;
 }
 .socialnetworklink {
     display: flex;
+    justify-content: space-between;
 }
 .infofooter {
     display: flex;
-    padding-inline-start: 3.5rem;
+    justify-content: space-between;
     align-items: center;
+    width: 30rem;
+    margin-inline-start: 2rem;
 }

@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'codeconf';
+    font-family: "codeconf";
     src:
       url("style/webfonts/codeconf-all/fonts/codeconf.ttf") format('truetype'),
       url("style/webfonts/codeconf-all/fonts/codeconf.woff") format('woff');
@@ -76,4 +76,35 @@
   }
   .icon-clover_line:before {
     content: "\e94f";
+  }
+
+  @font-face {
+    font-family: "leaguespartan";
+    src: 
+      url("style/webfonts/leaguespartan/LeagueSpartanVariable.ttf") format('truetype'),
+      url("style/webfonts/leaguespartan/LeagueSpartanVariable.woff2") format("woff");
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: "maven Pro";
+    src: 
+      url("style/webfonts/maven_Pro/MavenPro-VariableFont_wght.ttf") format('truetype');
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: "museo";
+    src: url("style/webfonts/museo/museo300.woff") format("woff");
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "museo";
+    src: url("style/webfonts/museo/museo500.woff") format("woff");
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: "museo";
+    src: url("style/webfonts/museo/museo700.woff") format("woff");
+    font-weight: 700;
   }
