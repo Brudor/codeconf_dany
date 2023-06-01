@@ -95,10 +95,11 @@ ul {
 }
 .header_main, main {
     max-width: 80rem;
-    min-width: 51.5rem;
+    min-width: 32.75rem;
     margin: 0 auto;
 }
 .list_speakers {
+    min-width: 34rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -225,9 +226,13 @@ ul {
     align-items: flex-end;
     height: 13rem;
     width: 100%;
-    min-width: 51.5rem;
+    min-width: 32.75rem;
     background: linear-gradient(0deg, rgba(96,76,233,1) 0%, rgba(116,88,233,1) 50%, rgba(102,42,228,1) 100%);
     margin-top: -0.8rem;
+    @media (max-width:51.5rem) {
+        min-width: 37.25rem;
+    }
+    
 }
 .teaser img {
     height: 18rem;
@@ -242,7 +247,7 @@ ul {
     color: #f1eee9;
     align-self: center;
     padding-inline-start: 2rem;
-    width: 26rem;
+    min-width: 26rem;
     font-family: "museo500";
     line-height: 1.5;
 }
@@ -275,12 +280,12 @@ ul {
     color: #343237;
 }
 .formsection {
-    width: 44rem;
+    width: 32.75rem;
     margin: auto;
 }
 .formsectionh2, .formsectionh3, .formsectionp {
     text-align: center;
-    width: 36rem;
+    width: 32.75rem;
     margin: 0 auto;
 }
 .formsectionh2 {
@@ -303,13 +308,13 @@ ul {
 .formline1 {
     display: flex;
     justify-content: space-between;
-    width: 35rem;
+    width: 32.75rem;
     margin: 0 auto;
 }
 .formline2 {
     display: flex;
     justify-content: space-between;
-    width: 35rem;
+    width: 32.75rem;
     margin: 0 auto;
 }
 .formline3 {
@@ -389,7 +394,7 @@ footer {
     padding-block-end: 4rem;
     padding-inline: 3rem;
     font-family: "museo300";
-    min-width: 68rem;
+    min-width: 32.75rem;
     @media (max-width:51.5rem) {
         width: 100%;
         min-width: 0rem;
@@ -401,15 +406,16 @@ footer {
 .footerline1 {
     display: flex;
     justify-content: space-between;
-    width: 60rem;
+    max-width: 60rem;
     margin: 0 auto;
     @media (max-width:71rem) {
-        align-items: center;
         justify-content: flex-start;
     }
     @media (max-width:51.5rem) {
         display: flex;
         flex-direction: column;
+        padding-inline: 2rem;
+        margin: 0 auto;
     }
 }
 .footerline1A {
@@ -471,17 +477,22 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    width: 58rem;
+    min-width: 51.5rem;
+    max-width: 58rem;
     margin: 0 auto;
     padding-inline-start: 2rem;
     @media (max-width:71rem) {
         justify-content: flex-start;
-        width: 100%;
+        min-width: 51.5rem;
         padding-inline-start: 0rem;
+        margin-block: 2rem;
     }
     @media (max-width:51.5rem) {
-        width: 30rem;
+        min-width: 30rem;
+        max-width: 30rem;
         justify-content: center;
+        padding-inline-start: 1rem;
+        margin: 0;
         margin-block: 2rem;
     }
 }
@@ -495,7 +506,7 @@ footer {
 .footerline3 {
     display: flex;
     justify-content: space-between;
-    width: 60rem;
+    max-width: 60rem;
     margin: 0 auto;
     @media (max-width:51.5rem) {
         display: flex;
@@ -503,16 +514,19 @@ footer {
     }
 }
 .socialnetwork {
+    border: 2px solid #535156;
     border-radius: 5px;
-    width: 28rem;
+    min-width: 28rem;
     padding-inline: 2rem;
     margin-inline-end: 2rem;
     @media (max-width:51.5rem) {
+        border: 0px solid #535156;
         border-top: 2px solid #535156;
         border-bottom: 2px solid #535156;
         border-radius: 0px;
-        width: auto;
         padding-block: 1rem;
+        padding-inline: 2rem;
+        margin-inline-end: 0rem;
     }
 }
 .socialnetwork h2 {
@@ -532,19 +546,14 @@ footer {
 }
 .socialnetworklink {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     color: #efe8e0;
     font-weight: bold;
-    @media (max-width:51.5rem) {
-        justify-content: flex-start;
-    }
 }
 .htag {
     display: flex;
     align-items: center;
-    @media (max-width:51.5rem) {
-        margin-inline-end: 2rem;
-    }
+    margin-inline-end: 2rem;
 }
 
 .htag:before {
