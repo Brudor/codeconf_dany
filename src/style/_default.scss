@@ -18,6 +18,7 @@ body {
     margin: 0 auto;
     padding-inline: 2rem;
     background-color: #f9f9f9;
+    
 }
 .header_main a img {
     height: 7rem;
@@ -95,7 +96,7 @@ ul {
 }
 .header_main, main {
     max-width: 80rem;
-    min-width: 32.75rem;
+    min-width: 34rem;
     margin: 0 auto;
 }
 .list_speakers {
@@ -221,6 +222,7 @@ ul {
     content: "|";
 }
 .teaser {
+    
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -230,10 +232,17 @@ ul {
     background: linear-gradient(0deg, rgba(96,76,233,1) 0%, rgba(116,88,233,1) 50%, rgba(102,42,228,1) 100%);
     margin-top: -0.8rem;
     @media (max-width:51.5rem) {
-        min-width: 37.25rem;
     }
     
 }
+.img_teaser {
+    @media (max-width:51.5rem) {
+        position: absolute;
+        top: 6.2rem;
+        position: absolute;
+        z-index: 1;
+    }
+  }
 .teaser img {
     height: 18rem;
     align-self: flex-end;
@@ -247,17 +256,34 @@ ul {
     color: #f1eee9;
     align-self: center;
     padding-inline-start: 2rem;
-    min-width: 26rem;
+    max-width: 26rem;
     font-family: "museo500";
     line-height: 1.5;
+
+    @media (max-width:51.5rem) {
+        align-self: flex-end;
+        max-width: 24rem;
+        line-height: 1;
+        padding-block-end: 1rem;
+        padding-inline-start: 0rem;
+        position: relative;
+        z-index: 2;
+    }
 }
 .title_description_teaser h1 {
     font-size: 38px;
+    @media (max-width:51.5rem) {
+        font-size: 60px;
+
+    }
 }
 .title_description_teaser p {
     font-family: "leaguespartan";
     font-weight: normal;
     font-size: 19px;
+    @media (max-width:51.5rem) {
+        display: none;
+    }
 }
 .event_speakers {
     padding-inline: 2rem;
@@ -463,7 +489,7 @@ footer {
     font-size: 14px;
 }
 .footerline1B {
-    width: 28rem;
+    min-width: 28rem;
     margin-inline-start: 2rem;
     @media (max-width:71rem) {
         display: none;
