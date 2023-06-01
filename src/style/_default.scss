@@ -65,7 +65,7 @@ ul {
 }
 .search:before {
     font-family: "codeconf";
-    margin-inline-start: 1rem;
+    margin-inline-start: 2rem;
     padding-inline-end: 0.3rem;
     content: "\e940";
     color: #f74c1e;
@@ -75,6 +75,7 @@ ul {
     font-family: "codeconf";
     content: "\e943";
     color: #f74c1e;
+    font-size: 24px;
 }
 .menu_hamburger:before {
     font-family: "codeconf";
@@ -256,13 +257,13 @@ ul {
 .event_speakers {
     padding-inline: 2rem;
     font-family: "museo500";
-
     color: #4b436a;
     letter-spacing: 0.5px;
     margin-block-end: 1rem;
 }
 .event_speakers ul {
     display: flex;
+    align-items: center;
     padding-block-start: 2rem;
 }
 .formulaire {
@@ -389,17 +390,35 @@ footer {
     padding-inline: 3rem;
     font-family: "museo300";
     min-width: 68rem;
+    @media (max-width:51.5rem) {
+        width: 100%;
+        min-width: 0rem;
+        padding-inline: 0rem;
+        padding-block-start: 6rem;
+        padding-block-end: 2rem;
+    }
 }
 .footerline1 {
     display: flex;
     justify-content: space-between;
     width: 60rem;
     margin: 0 auto;
+    @media (max-width:71rem) {
+        align-items: center;
+        justify-content: flex-start;
+    }
+    @media (max-width:51.5rem) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 .footerline1A {
     width: 28rem;
     margin-inline-end: 2rem;
     line-height: 1.8;
+    @media (max-width:71rem) {
+        margin-inline-end: 4rem;
+    }
 }
 .footerline1A h3, .footerline1A p {
     color: #ffffff;
@@ -407,10 +426,31 @@ footer {
 .footerline1A h2 {
     color: #0cbfc3;
     font-size: 20px;
+    @media (max-width:51.5rem) {
+        color: #dac9b5;
+    }
 }
 .footerline1A h3 {
     font-family: "mavenpro";
     font-size: 15px;
+    @media (max-width:51.5rem) {
+        border: 1px solid #535156;
+        border-radius: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-block: 0.8rem;
+        margin-block: 1rem;
+
+    }
+}
+.footerline1A h3:before {
+    @media (max-width:51.5rem) {
+        color: #dac9b5;
+        font-family: "codeconf";
+        content: "\e948";
+        padding-inline-end: 0.5rem;
+    }
 }
 .footerline1A p {
     font-family: "mavenpro";
@@ -419,6 +459,9 @@ footer {
 .footerline1B {
     width: 28rem;
     margin-inline-start: 2rem;
+    @media (max-width:71rem) {
+        display: none;
+    }
 }
 .centreLA {
     width: 28rem;
@@ -427,31 +470,61 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     width: 58rem;
     margin: 0 auto;
     padding-inline-start: 2rem;
+    @media (max-width:71rem) {
+        justify-content: flex-start;
+        width: 100%;
+        padding-inline-start: 0rem;
+    }
+    @media (max-width:51.5rem) {
+        width: 30rem;
+        justify-content: center;
+        margin-block: 2rem;
+    }
 }
 .footerline2 ul li {
     padding-block: 4rem;
-    object-fit: countain;
+    @media (max-width:71rem) {
+        padding-inline: 1rem;
+        padding-block: 1rem;
+    }
 }
 .footerline3 {
     display: flex;
     justify-content: space-between;
     width: 60rem;
     margin: 0 auto;
+    @media (max-width:51.5rem) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 .socialnetwork {
-    border: 2px solid #535156;
     border-radius: 5px;
     width: 28rem;
     padding-inline: 2rem;
     margin-inline-end: 2rem;
+    @media (max-width:51.5rem) {
+        border-top: 2px solid #535156;
+        border-bottom: 2px solid #535156;
+        border-radius: 0px;
+        width: auto;
+        padding-block: 1rem;
+    }
 }
 .socialnetwork h2 {
     padding-block-start: 1rem;
     color: #0cbfc3;
     font-size: 17px;
+    @media (max-width:51.5rem) {
+        color: #dac9b5;
+    }
+}
+.socialnetwork h2 span {
+    text-transform: uppercase;
 }
 .socialnetwork div {
     padding-block-start: 0.8rem;
@@ -462,6 +535,35 @@ footer {
     justify-content: space-between;
     color: #efe8e0;
     font-weight: bold;
+    @media (max-width:51.5rem) {
+        justify-content: flex-start;
+    }
+}
+.htag {
+    display: flex;
+    align-items: center;
+    @media (max-width:51.5rem) {
+        margin-inline-end: 2rem;
+    }
+}
+
+.htag:before {
+    font-family: "codeconf";
+    content: "\e947";
+    font-size: 24px;
+    margin-inline-end: 0.5rem;
+    font-weight: 500;
+}
+.twitter {
+    display: flex;
+    align-items: center;
+}
+.twitter:before {
+    font-family: "codeconf";
+    content: "\e946";
+    font-size: 24px;
+    margin-inline-end: 0.5rem;
+    font-weight: 500;
 }
 .infofooter {
     display: flex;
@@ -471,6 +573,12 @@ footer {
     margin-inline-start: 2rem;
     color: #ffffff;
 }
+.infofooter1 {
+    @media (max-width:71rem) {
+        display: none;
+    }
+}
+
 .infofooter1 h2 {
     font-size: 16px;
     font-family: "mavenpro";
@@ -478,10 +586,28 @@ footer {
 }
 .infofooter2 {
     letter-spacing: 0.5px;
+    @media (max-width:51.5rem) {
+        margin-block-start: 2rem;
+    }
+}
+.helpdeskmobile {
+    @media (max-width:51.5rem) {
+        display: flex;
+        align-items: center;
+    }
+}
+.organisedmobile {
+    @media (max-width:51.5rem) {
+        display: flex;
+        align-items: center;
+    }
 }
 .infofooter2 h2 {
     font-size: 16px;
     font-family: "museo300";
+    @media (max-width:51.5rem) {
+        margin-inline-end: 0.3rem;
+    }
 }
 
 .infofootermiddleelement1 {
@@ -502,4 +628,20 @@ footer {
 .infofooterlastelement2 {
     color: #dac9b5;
     font-weight: bold;
+}
+.helpdesk {
+    display: none;
+    color: #ffffff;
+    @media (max-width:71rem) {
+        display: block;
+        margin-block-start: 1rem;
+    }
+}
+.helpdesk h2 {
+    font-size: 16px;
+    font-family: "mavenpro";
+    font-weight: 00;
+    @media (max-width:51.5rem) {
+        margin-inline-end: 0.3rem;
+    }
 }
