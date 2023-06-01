@@ -232,7 +232,7 @@ summary {
 
 @font-face {
   font-family: "codeconf";
-  src: url "./webfonts/codeconf-all/fonts/codeconf.ttf" format("truetype"), url "./webfonts/codeconf-all/fonts/codeconf.woff" format("woff");
+  src: url("./webfonts/codeconf-all/fonts/codeconf.ttf") format("truetype"), url("./webfonts/codeconf-all/fonts/codeconf.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -348,8 +348,12 @@ summary {
   src: url("./webfonts/museo/museo700.woff") format("woff");
   font-weight: normal;
 }
-* {
+*,
+*::after,
+*::before {
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -376,19 +380,66 @@ ul {
   padding: 0;
 }
 
-.header_main ul {
+.nav_desktop {
   display: flex;
-  font-family: mavenpro;
+  font-family: "mavenpro";
   font-weight: bold;
   font-size: 20px;
   color: #343237;
 }
+@media (max-width: 71rem) {
+  .nav_desktop {
+    display: none;
+  }
+}
 
-.header_main ul li a {
+.nav_mobile {
+  display: none;
+  font-family: "mavenpro";
+  font-weight: bold;
+  font-size: 20px;
+  color: #343237;
+}
+@media (max-width: 71rem) {
+  .nav_mobile {
+    display: flex;
+  }
+}
+
+.nav_desktop li a, .nav_mobile li a {
   padding-inline: 0.5rem;
   padding-block: 2rem;
   text-decoration: none;
   color: #343237;
+}
+
+.schedule:before {
+  font-family: "codeconf";
+  margin-inline-start: 2rem;
+  padding-inline-end: 0.8rem;
+  content: "\e93f";
+  font-weight: 300;
+}
+
+.search:before {
+  font-family: "codeconf";
+  margin-inline-start: 1rem;
+  padding-inline-end: 0.3rem;
+  content: "\e940";
+  color: #f74c1e;
+  font-weight: 300;
+}
+
+.home:before {
+  font-family: "codeconf";
+  content: "\e943";
+  color: #f74c1e;
+}
+
+.menu_hamburger:before {
+  font-family: "codeconf";
+  content: "\e93e";
+  font-weight: 300;
 }
 
 .header_and_speaker {
@@ -407,7 +458,7 @@ ul {
 
 .header_main, main {
   max-width: 80rem;
-  min-width: 52.25rem;
+  min-width: 51.5rem;
   margin: 0 auto;
 }
 
@@ -415,14 +466,15 @@ ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-inline: 1rem;
 }
 
 .speaker {
   width: 15rem;
   display: flex;
   flex-direction: column;
-  margin-inline: 2rem;
-  margin-block: 2rem;
+  margin-inline: 1rem;
+  margin-block: 1rem;
 }
 
 .imgspeaker {
@@ -433,7 +485,7 @@ ul {
 .decospeaker {
   display: flex;
   justify-content: flex-end;
-  margin-top: -1rem;
+  margin-top: -1.5rem;
 }
 
 .decospeaker img {
@@ -446,7 +498,7 @@ ul {
 
 .location {
   color: #a29db1;
-  font-family: leaguespartan;
+  font-family: "leaguespartan";
   font-size: 20px;
 }
 
@@ -455,7 +507,7 @@ ul {
 }
 
 .namespeakerfront, .namespeakerback {
-  font-family: museo700;
+  font-family: "museo700";
   font-size: 22px;
 }
 
@@ -466,6 +518,28 @@ ul {
   flex-direction: column;
   justify-content: space-between;
   padding-block-end: 1.5rem;
+  transition: transform 0.8s ease-in-out;
+}
+
+.moreinfo a {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #f74d1c;
+  padding: 2rem;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 100%;
+  margin: 0 auto;
+  margin-block-start: -19rem;
+  margin-block-end: 19rem;
+  opacity: 0;
+}
+.moreinfo a:hover {
+  opacity: 1;
 }
 
 .speakerback {
@@ -480,12 +554,12 @@ ul {
 }
 
 .titleevent {
-  font-family: museo700;
+  font-family: "museo700";
   font-size: 20px;
 }
 
 .contentevent {
-  font-family: mavenpro;
+  font-family: "mavenpro";
   line-height: 1.4;
 }
 
@@ -498,18 +572,21 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: mavenpro;
+  font-family: "mavenpro";
   font-weight: bold;
   font-size: 16px;
 }
 
 .aboutevent {
-  color: #f74c1e;
   border: 2px solid #f74c1e;
   padding-block: 0.5rem;
   padding-inline: 1rem;
   border-radius: 2rem;
+}
+.aboutevent a {
   text-transform: uppercase;
+  text-decoration: none;
+  color: #f74c1e;
 }
 
 .timeevent {
@@ -530,6 +607,7 @@ ul {
   align-items: flex-end;
   height: 13rem;
   width: 100%;
+  min-width: 51.5rem;
   background: linear-gradient(0deg, rgb(96, 76, 233) 0%, rgb(116, 88, 233) 50%, rgb(102, 42, 228) 100%);
   margin-top: -0.8rem;
 }
@@ -540,13 +618,18 @@ ul {
   margin-block-end: -0.15rem;
   padding-inline-end: 3rem;
 }
+@media (max-width: 71rem) {
+  .teaser img {
+    height: 15.5rem;
+  }
+}
 
 .title_description_teaser {
   color: #f1eee9;
   align-self: center;
   padding-inline-start: 2rem;
   width: 26rem;
-  font-family: museo500;
+  font-family: "museo500";
   line-height: 1.5;
 }
 
@@ -555,17 +638,17 @@ ul {
 }
 
 .title_description_teaser p {
-  font-family: leaguespartan;
+  font-family: "leaguespartan";
   font-weight: normal;
   font-size: 19px;
 }
 
 .event_speakers {
   padding-inline: 2rem;
-  font-family: museo500;
-  font-weight: bold;
+  font-family: "museo500";
   color: #4b436a;
   letter-spacing: 0.5px;
+  margin-block-end: 1rem;
 }
 
 .event_speakers ul {
@@ -601,7 +684,7 @@ ul {
 }
 
 .formsectionh3 {
-  font-family: museo300;
+  font-family: "museo300";
   padding-block-start: 1.5rem;
   padding-block-end: 0.5rem;
   font-size: 26px;
@@ -645,7 +728,7 @@ ul {
   margin-block-start: 3rem;
   text-transform: uppercase;
   font-weight: bold;
-  font-family: mavenpro;
+  font-family: "mavenpro";
   font-size: 18px;
   letter-spacing: -1px;
 }
@@ -655,7 +738,7 @@ ul {
   margin: 0 auto;
   text-align: center;
   padding-block-start: 3rem;
-  font-family: museo700;
+  font-family: "museo700";
   font-size: 24px;
 }
 
@@ -693,8 +776,16 @@ ul {
   width: auto;
   height: auto;
   font-size: 14px;
-  font-family: mavenpro;
+  font-family: "mavenpro";
   margin: 0 auto;
+}
+
+.getticket:after {
+  font-family: "codeconf";
+  margin-inline-start: 0.5rem;
+  content: "\e945" "\e944";
+  font-weight: 300;
+  letter-spacing: 0.5rem;
 }
 
 footer {
@@ -702,7 +793,8 @@ footer {
   padding-block-start: 8rem;
   padding-block-end: 4rem;
   padding-inline: 3rem;
-  font-family: museo300;
+  font-family: "museo300";
+  min-width: 68rem;
 }
 
 .footerline1 {
@@ -728,12 +820,12 @@ footer {
 }
 
 .footerline1A h3 {
-  font-family: mavenpro;
+  font-family: "mavenpro";
   font-size: 15px;
 }
 
 .footerline1A p {
-  font-family: mavenpro;
+  font-family: "mavenpro";
   font-size: 14px;
 }
 
@@ -804,7 +896,7 @@ footer {
 
 .infofooter1 h2 {
   font-size: 16px;
-  font-family: mavenpro;
+  font-family: "mavenpro";
   font-weight: 500;
 }
 
@@ -814,24 +906,24 @@ footer {
 
 .infofooter2 h2 {
   font-size: 16px;
-  font-family: museo300;
+  font-family: "museo300";
 }
 
 .infofootermiddleelement1 {
   font-weight: bold;
-  font-family: mavenpro;
+  font-family: "mavenpro";
   padding-block: 0.3rem;
 }
 
 .infofootermiddleelement2 {
   font-weight: bold;
-  font-family: museo300;
+  font-family: "museo300";
   padding-block: 0.3rem;
 }
 
 .infofooterlastelement1 {
   color: #dac9b5;
-  font-family: museo500;
+  font-family: "museo500";
 }
 
 .infofooterlastelement2 {
