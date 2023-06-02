@@ -194,6 +194,7 @@ ul {
     }
     @media (max-width:51.5rem) {
         justify-content: center;
+        flex-direction: column;
     }
 }
 .speaker {
@@ -203,6 +204,11 @@ ul {
     margin-inline: 1rem;
     margin-block-start: 1rem;
     margin-block-end: -6rem;
+    @media (max-width:51.5rem) {
+        margin: 0;
+        
+    }
+
 }
 
 speaker .speakerfront,
@@ -227,11 +233,21 @@ speaker .speakerfront,
 .imgspeaker {
     width: 15rem;
     background-color: #7456ea;
+    @media (max-width:51.5rem) {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 100%;
+        
+    }
 }
 .decospeaker {
     display: flex;
     justify-content: flex-end;
     margin-top: -1.5rem;
+    @media (max-width:51.5rem) {
+        display: none;
+        
+    }
 }
 .decospeaker img {
     width: 10rem;
@@ -261,6 +277,12 @@ speaker .speakerfront,
     justify-content: space-between;
     padding-block-end: 1.5rem;
     transition: transform 0.8s ease-in-out;
+    @media (max-width:51.5rem) {
+        flex-direction: row-reverse;
+        align-items: center;
+        min-width: 40rem;
+        
+    }
 }
 .moreinfo a {
     display: flex;
@@ -294,6 +316,7 @@ speaker .speakerfront,
     border: 1px solid black;
     background-color: #ffefe7;
     color: #343237;
+    
 }
 .titleevent {
     font-family: "museo700";
