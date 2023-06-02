@@ -725,8 +725,9 @@
     moreInfoLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            const speaker = link.closest('.speaker');
+            let speaker = link.closest('.speaker');
             speaker.classList.add('flipped');
+            link.style.display = 'none';
         });
     });
     document.addEventListener('click', function(e) {
@@ -734,6 +735,8 @@
         speakers.forEach(speaker => {
             if (!speaker.contains(e.target)) {
             speaker.classList.remove('flipped');
+            let link = speaker.querySelector('.moreinfo a');
+            link.style.display = 'flex';
             }
         });
     });

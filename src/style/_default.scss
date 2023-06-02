@@ -201,7 +201,8 @@ ul {
     display: flex;
     flex-direction: column;
     margin-inline: 1rem;
-    margin-block: 1rem;
+    margin-block-start: 1rem;
+    margin-block-end: -6rem;
 }
 
 speaker .speakerfront,
@@ -262,7 +263,6 @@ speaker .speakerfront,
     transition: transform 0.8s ease-in-out;
 }
 .moreinfo a {
-    position: absolute;
     display: flex;
     align-items: center;
     color: #ffffff;
