@@ -722,7 +722,6 @@
     </footer>
 <script>
     let moreInfoLinks = document.querySelectorAll('.moreinfo a');
-
     moreInfoLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -730,7 +729,6 @@
             speaker.classList.add('flipped');
         });
     });
-
     document.addEventListener('click', function(e) {
         let speakers = document.querySelectorAll('.speaker');
         speakers.forEach(speaker => {
