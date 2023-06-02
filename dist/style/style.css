@@ -497,6 +497,22 @@ ul {
   color: #343237;
 }
 
+@media (max-width: 71rem) {
+  .schedule {
+    margin-inline-end: 0.5rem;
+  }
+}
+@media (max-width: 33rem) {
+  .schedule {
+    margin-inline-end: 1.5rem;
+  }
+}
+@media (max-width: 32rem) {
+  .schedule {
+    margin-inline-end: 2.5rem;
+  }
+}
+
 .schedule:before {
   font-family: "codeconf";
   margin-inline-start: 2rem;
@@ -929,6 +945,13 @@ footer {
   font-family: "museo300";
   min-width: 32.75rem;
 }
+@media (max-width: 71rem) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 @media (max-width: 51.5rem) {
   footer {
     width: 100%;
@@ -967,6 +990,11 @@ footer {
 @media (max-width: 71rem) {
   .footerline1A {
     margin-inline-end: 4rem;
+  }
+}
+@media (max-width: 51.5rem) {
+  .footerline1A {
+    margin-inline-end: 0rem;
   }
 }
 
@@ -1040,18 +1068,16 @@ footer {
 }
 @media (max-width: 71rem) {
   .footerline2 ul {
-    justify-content: flex-start;
-    min-width: 51.5rem;
+    justify-content: center;
     padding-inline-start: 0rem;
     margin-block: 2rem;
   }
 }
 @media (max-width: 51.5rem) {
   .footerline2 ul {
-    min-width: 30rem;
-    max-width: 30rem;
+    min-width: 25rem;
+    max-width: 25rem;
     justify-content: center;
-    padding-inline-start: 1rem;
     margin: 0;
     margin-block: 2rem;
   }
@@ -1062,7 +1088,7 @@ footer {
 }
 @media (max-width: 71rem) {
   .footerline2 ul li {
-    padding-inline: 1rem;
+    padding-inline: 0.5rem;
     padding-block: 1rem;
   }
 }
@@ -1073,10 +1099,15 @@ footer {
   max-width: 60rem;
   margin: 0 auto;
 }
+@media (max-width: 71rem) {
+  .footerline3 {
+    justify-content: center;
+  }
+}
 @media (max-width: 51.5rem) {
   .footerline3 {
-    display: flex;
     flex-direction: column;
+    align-content: center;
   }
 }
 
@@ -1087,6 +1118,12 @@ footer {
   padding-inline: 2rem;
   margin-inline-end: 2rem;
 }
+@media (max-width: 71rem) {
+  .socialnetwork {
+    margin-inline-end: 4rem;
+    max-width: 60rem;
+  }
+}
 @media (max-width: 51.5rem) {
   .socialnetwork {
     border: 0px solid #535156;
@@ -1094,7 +1131,7 @@ footer {
     border-bottom: 2px solid #535156;
     border-radius: 0px;
     padding-block: 1rem;
-    padding-inline: 2rem;
+    padding-inline: 0rem;
     margin-inline-end: 0rem;
   }
 }
@@ -1160,6 +1197,17 @@ footer {
   width: 28rem;
   margin-inline-start: 2rem;
   color: #ffffff;
+}
+@media (max-width: 71rem) {
+  .infofooter {
+    margin-inline-start: 0rem;
+    width: 100%;
+  }
+}
+@media (max-width: 51.5rem) {
+  .infofooter {
+    margin-inline-start: 0rem;
+  }
 }
 
 @media (max-width: 71rem) {
