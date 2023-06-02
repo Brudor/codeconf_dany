@@ -589,10 +589,24 @@ ul {
   margin-inline: 1rem;
   margin-block: 1rem;
 }
-@media (max-width: 71rem) {
-  .speaker {
-    display: flex;
-  }
+
+speaker .speakerfront,
+.speaker .speakerback {
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.8s ease-in-out;
+}
+
+.speaker .speakerback {
+  transform: rotateY(180deg);
+}
+
+.speaker.flipped .speakerfront {
+  transform: rotateY(180deg);
+}
+
+.speaker.flipped .speakerback {
+  transform: rotateY(0deg);
 }
 
 .imgspeaker {
@@ -631,6 +645,7 @@ ul {
 
 .speakerfront {
   height: 23rem;
+  width: 15rem;
   display: flex;
   background-color: #f8f8f8;
   flex-direction: column;
@@ -640,6 +655,7 @@ ul {
 }
 
 .moreinfo a {
+  position: absolute;
   display: flex;
   align-items: center;
   color: #ffffff;
@@ -667,6 +683,7 @@ ul {
   justify-content: space-between;
   padding: 1.5rem;
   height: 23rem;
+  width: 15rem;
   border: 1px solid black;
   background-color: #ffefe7;
   color: #343237;

@@ -720,5 +720,25 @@
             </div>
         </div>
     </footer>
+<script>
+    let moreInfoLinks = document.querySelectorAll('.moreinfo a');
+
+    moreInfoLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const speaker = link.closest('.speaker');
+            speaker.classList.add('flipped');
+        });
+    });
+
+    document.addEventListener('click', function(e) {
+        let speakers = document.querySelectorAll('.speaker');
+        speakers.forEach(speaker => {
+            if (!speaker.contains(e.target)) {
+            speaker.classList.remove('flipped');
+            }
+        });
+    });
+</script>
 </body>
 </html>
