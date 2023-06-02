@@ -638,23 +638,18 @@
                 <p class="formsectionp">Submit it for the next event by filling out the form below. Do not forget to specify the subject and the related keywords</p>
                 <form>
                     <div class="formline1">
-                        <label for="name">Name*</label>
-                        <input type="text" id="name" name="name" required>
+                        <input class="inputname" type="text" id="name" name="name" required placeholder="Name*">
                       
-                        <label for="email">Mail*</label>
-                        <input type="email" id="email" name="email" required>
+                        <input class="inputmail"type="email" id="email" name="email" required placeholder="Mail*">
                     </div>
                     <div class="formline2">
-                        <label for="subject">Your subject*</label>
-                        <input type="text" id="subject" name="subject" required>
+                        <input class="inputsubject" type="text" id="subject" name="subject" required placeholder="Your Subject*">
                       
-                        <label for="keywords">Keywords*</label>
-                        <input type="text" id="keywords" name="keywords" required>
+                        <input class="inputkeywords" type="text" id="keywords" name="keywords" required placeholder="Keywords*[separate by comma]">
                     </div> 
                     <div class="formline3">
-                        <label for="details">Short details*</label>
-                        <textarea id="details" name="details" rows="6" required></textarea>
-                        <input class="submit" type="button" value="Send your subject">
+                        <textarea id="details" name="details" rows="5" required placeholder="Short details*"></textarea>
+                        <input class="submit" type="submit" value="Send your subject">
                     </div>           
                 </form>
                 <div class="participate">

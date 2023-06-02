@@ -359,6 +359,7 @@ summary {
 body {
   margin: 0 auto;
   background-color: #f9f9f9;
+  width: 100%;
 }
 
 #menu__toggle {
@@ -814,14 +815,23 @@ ul {
 }
 
 .formsection {
-  width: 32.75rem;
   margin: auto;
 }
 
 .formsectionh2, .formsectionh3, .formsectionp {
   text-align: center;
-  width: 32.75rem;
+  width: 36rem;
   margin: 0 auto;
+}
+@media (max-width: 71rem) {
+  .formsectionh2, .formsectionh3, .formsectionp {
+    width: 40rem;
+  }
+}
+@media (max-width: 51.5rem) {
+  .formsectionh2, .formsectionh3, .formsectionp {
+    width: 24rem;
+  }
 }
 
 .formsectionh2 {
@@ -837,30 +847,107 @@ ul {
   padding-block-end: 0.5rem;
   font-size: 26px;
 }
+@media (max-width: 71rem) {
+  .formsectionh3 {
+    padding-block-end: 1.5rem;
+  }
+}
+@media (max-width: 51.5rem) {
+  .formsectionh3 {
+    width: 16rem;
+  }
+}
 
 .formsectionp {
   padding-block-end: 3rem;
   line-height: 1.5;
   font-size: 20px;
+  font-weight: 300;
+}
+
+form {
+  margin: 0 auto;
+  margin-inline: 6em;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #d9d9d9;
+  padding-block: 0.5rem;
+}
+
+.inputname, .inputsubject {
+  width: 50%;
+  margin-inline-end: 4rem;
+}
+@media (max-width: 51.5rem) {
+  .inputname, .inputsubject {
+    margin-block-end: 2rem;
+    width: 100%;
+  }
+}
+
+.inputmail, .inputkeywords {
+  width: 50%;
+}
+@media (max-width: 51.5rem) {
+  .inputmail, .inputkeywords {
+    width: 100%;
+  }
+}
+
+input::placeholder {
+  color: #343138;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+textarea {
+  border: 1px solid #d9d9d9;
+  padding: 1rem;
+}
+
+textarea::placeholder {
+  color: #343138;
+  font-size: 14px;
+  font-weight: 300;
 }
 
 .formline1 {
   display: flex;
   justify-content: space-between;
-  width: 32.75rem;
   margin: 0 auto;
+  margin-block-end: 2rem;
+}
+@media (max-width: 51.5rem) {
+  .formline1 {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .formline2 {
   display: flex;
   justify-content: space-between;
-  width: 32.75rem;
   margin: 0 auto;
+  margin-block-end: 3rem;
+}
+@media (max-width: 51.5rem) {
+  .formline2 {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .formline3 {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+}
+@media (max-width: 51.5rem) {
+  .formline3 {
+    width: 100%;
+  }
 }
 
 .submit {
@@ -879,6 +966,10 @@ ul {
   font-family: "mavenpro";
   font-size: 18px;
   letter-spacing: -1px;
+}
+.submit:hover {
+  background-color: #f74c1e;
+  color: #ffffff;
 }
 
 .participate {
@@ -954,8 +1045,6 @@ footer {
 }
 @media (max-width: 51.5rem) {
   footer {
-    width: 100%;
-    min-width: 0rem;
     padding-inline: 0rem;
     padding-block-start: 6rem;
     padding-block-end: 2rem;
@@ -977,7 +1066,6 @@ footer {
   .footerline1 {
     display: flex;
     flex-direction: column;
-    padding-inline: 2rem;
     margin: 0 auto;
   }
 }
